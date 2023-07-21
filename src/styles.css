@@ -8,6 +8,7 @@ html {
   background-size: cover;
   z-index:0;
   overflow: hidden;
+  cursor: url('../assets/hammer.png'), auto;
 }
 
 h1 {
@@ -39,7 +40,7 @@ h2 {
   height: 400px;
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto;
+  margin: -50 auto 0 auto;
   /*cursor: url('./assets/mallet.png'), pointer;*/
 }
 
@@ -80,3 +81,8 @@ h2 {
   top: 0;
   /*transform: scale(1.1);*/
 }
+
+#difficulty-buttons .selected {
+background-color: indianred;
+color: whitesmoke;
+};
