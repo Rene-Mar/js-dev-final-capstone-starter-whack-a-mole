@@ -33,6 +33,13 @@ function startGame() {
   startAudio(song); // Start playing the audio
   setDuration(10);
   showUp();
+
+ // add pulse class to timer
+ let timerElement = document.getElementById('timer');
+ if(timerElement) {
+   timerElement.classList.add('pulse');
+ }
+
   return "game started";
 }
 // Event listener for the start button
@@ -305,15 +312,14 @@ function setDuration(duration) {
 function stopGame() {
   stopAudio(song); //stopAudio(song); // Stop playing the audio
   clearInterval(timer);
+  let timerElement = document.getElementById('timer'); //animation will stop when game stops
+
+  // Remove the 'pulse' class from the timer element
+  timerElement.classList.remove('pulse');
   return "game stopped";
 }
 
-/**
- *
- * This is the function that starts the game when the `startButton`
- * is clicked.
- *
- */
+
 
 // Please do not modify the code below.
 // Used for testing purposes.
