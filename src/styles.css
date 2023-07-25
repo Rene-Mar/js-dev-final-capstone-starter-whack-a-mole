@@ -24,6 +24,7 @@ html {
     font-family: "Comic Sans MS", "Comic Sans", cursive;
     color: white;
     -webkit-text-stroke: 2px rgb(247, 219, 7);
+    margin-top: .5;
   }
   
   h2 {
@@ -36,6 +37,7 @@ html {
   #start {
       text-align: center;
       font-size: 30px;
+     
   }
   
   #timer{
@@ -47,15 +49,19 @@ html {
     height: 400px;
     display: flex;
     flex-wrap: wrap;
-    margin: -50 auto 0 auto;
+    margin: -50 auto;
     /*cursor: url('./assets/mallet.png'), pointer;*/
   }
+  
+  
   
   .hole {
     flex: 1 0 33.33%;
     overflow: hidden;
     position: relative;
   }
+
+  
   
   .hole:after {
     display: block;
@@ -89,21 +95,9 @@ html {
   #difficulty-buttons .selected {
   background-color: indianred;
   color: whitesmoke;
-  };
-
- 
-/* Small devices (landscape phones, 576px and up) */
-@media screen and (min-width: 576px) {
-  .hole, .mole {
-      
-      width: 35px;
-      height: 35px;
-      
   }
-}
 
-
-
+  
 .hole.show .mole {
   top: 0;
   animation: pop-in 1s forwards;
@@ -198,4 +192,21 @@ html::before {
   display: inline-block; /* Add this to allow transform */
 }
 
+
+
+#board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30vh; /* adjust this to fit your needs */
+}
+
+
+
+
+#start {
+  margin-left: 100;
+ 
+}
 
